@@ -35,8 +35,8 @@ respuestas = {}
 
 # %%
 respuestas[(1,0,"Moneda")] = [
-0, # 0. Cara
-0, # 1. Sello
+0.5, # 0. Cara
+0.5, # 1. Sello
 ""
 ]
 
@@ -52,10 +52,10 @@ respuestas[(1,0,"Moneda")] = [
 
 # %%
 respuestas[(1,1,"Cajas")] = [
-0, # 0. Caja 0
-0, # 1. Caja 1
-0, # 2. Caja 2
-0, # 3. Otro lugar
+0.25, # 0. Caja 0
+0.25, # 1. Caja 1
+0.25, # 2. Caja 2
+0.25, # 3. Otro lugar
 ""
 ]
 
@@ -73,9 +73,9 @@ respuestas[(1,1,"Cajas")] = [
 # %%
 respuestas[(1,2,"Mentir")] = [
 0, # 0. Maxima incertidumbre (entropía)
-0, # 1. Minima incertidumbre (entropía)
+0.75, # 1. Minima incertidumbre (entropía)
 0, # 2. Maxima incertidumbre (entropía) dada la información disponible (restricciones)
-0, # 3. Minima incertidumbre (entropía) dada la información disponible (restricciones)
+0.25, # 3. Minima incertidumbre (entropía) dada la información disponible (restricciones)
 0, # 4. Ninguna de las anteriores
 "",
 ]
@@ -99,15 +99,15 @@ respuestas[(1,2,"Mentir")] = [
 # %%
 respuestas[(1,3,"Universos")] = [
 0, # 0. Regalo = 1, Abren = 1
-0, # 1. Regalo = 1, Abren = 2
-0, # 2. Regalo = 1, Abren = 3
+0.165, # 1. Regalo = 1, Abren = 2
+0.165, # 2. Regalo = 1, Abren = 3
 0, # 3. Regalo = 2, Abren = 1
 0, # 4. Regalo = 2, Abren = 2
-0, # 5. Regalo = 2, Abren = 3
+0.33, # 5. Regalo = 2, Abren = 3
 0, # 6. Regalo = 3, Abren = 1
-0, # 7. Regalo = 3, Abren = 2
+0.33, # 7. Regalo = 3, Abren = 2
 0, # 8. Regalo = 3, Abren = 3
-"Justifique brevemente",
+"No ocurre jamás que se abra la 1 o que se abran las cajas que contienen el regalo. luego si el regalo esta en la 1 hay 2 posibilidades (1/3)/2 y en las otras 2 hay solo 1 posibilidad de caja para abrir dado que la 1 esta reservada y en otra hay un regalo (1/3 en c/u)",
 ]
 
 # %% [markdown]
@@ -129,11 +129,11 @@ respuestas[(1,3,"Universos")] = [
 respuestas[(1,4,"Razonamiento")] = [
 0, # 0. Antes del siglo 17
 0, # 1. Siglo 17
-0, # 2. Siglo 18
+1, # 2. Siglo 18
 0, # 3. Siglo 19
 0, # 4. Siglo 20
 0, # 5. Siglo 21
-"",
+"suponiendo que estamos hablando del enfoque bayesiano",
 ]
 
 # %% [markdown]
@@ -152,9 +152,9 @@ respuestas[(1,5,"Independencia")] = [
 0, # 0. 0.9
 0, # 1. 0.1
 0, # 2. 0.0
-0, # 3. 0.2
+1, # 3. 0.2
 0, # 4. Ninguna de las anteriores
-"Justificar brevemente",
+"dado que son independientes la probabilidad conjunta es simplemete la multipicacion de las probablidades",
 ]
 
 # %% [markdown]
@@ -196,13 +196,13 @@ respuestas[(1,6,"Marginal")] = [
 0, # 9. P(Y=1): 0.55
 0, # 10. P(Y=1): 0.60
 0, # 11. P(Y=1): 0.65
-0, # 12. P(Y=1): 0.70
+1, # 12. P(Y=1): 0.70
 0, # 13. P(Y=1): 0.75
 0, # 14. P(Y=1): 0.80
 0, # 15. P(Y=1): 0.85
 0, # 16. P(Y=1): 0.90
 0, # 17. Ninguna de las anteriores
-"Justifique brevemente.",
+"Suma de P(X=1, Y=1) y P(X=0, Y=1), como son binarias no dbería haber interseccion entre X = 1 e Y = 1 con su contraparte en 0",
 ]
 
 
@@ -245,10 +245,10 @@ respuestas[(1,7,"Condicional")] = [
 0, # 10. P(Y=1|X=1): 1/6
 0, # 11. P(Y=1|X=1): 2/6
 0, # 12. P(Y=1|X=1): 3/6
-0, # 13. P(Y=1|X=1): 4/6
+1, # 13. P(Y=1|X=1): 4/6
 0, # 14. P(Y=1|X=1): 5/6
 0, # 15. Ninguna de las anteriores
-"Justifique brevemente.",
+"Es la interseccion, P(X=1, Y=1) / P(X=1), osea 0.4/0.6",
 ]
 
 
@@ -263,7 +263,7 @@ respuestas[(1,7,"Condicional")] = [
 
 # %%
 respuestas[(1,8,"Overfitting")] = [
-0, # 0. No
+1, # 0. No
 0, # 1. Si
 "",
 ]
@@ -278,9 +278,9 @@ respuestas[(1,8,"Overfitting")] = [
 
 # %%
 respuestas[(1,9,"Evaluación")] = [
-0, # 0. No
+1, # 0. No
 0, # 1. Si
-"Justifique brevemente",
+"se define por objetivos y prioridades, por ejemplo, un modelo que clasifica y otro que predice no manejan los mismos parametros de éxito",
 ]
 
 # %% [markdown]
@@ -300,8 +300,8 @@ respuestas[(1,10,"Predicción")] = [
 0, # 1. El modelo causal correcto a veces puede ser mejor, y a veces peor, que los complejos algoritmos de AI/ML.
 0, # 2. El modelo causal correcto nunca puede ser peor prediciendo que los complejos algoritmos de AI/ML.
 0, # 3. Los modelos causales solo explican, no predicen.
-0, # 4. Ninguna de las anteriores
-"Justifique brevemente",
+1, # 4. Ninguna de las anteriores
+"Porque son modelos de prediccion basados en enormes cantidades de datos que funcionan como cajas negras en donde no se termina de comprender la relacion causa-efecto en su toma de decisiones",
 ]
 
 # %% [markdown]
@@ -326,15 +326,15 @@ respuestas[(1,11,"Diversificación")] = [
 0, # 0. Recursos asignados a Cara: 0.0
 0, # 1. Recursos asignados a Cara: 0.1
 0, # 2. Recursos asignados a Cara: 0.2
-0, # 3. Recursos asignados a Cara: 0.3
-0, # 4. Recursos asignados a Cara: 0.4
+0.75, # 3. Recursos asignados a Cara: 0.3
+0.25, # 4. Recursos asignados a Cara: 0.4
 0, # 5. Recursos asignados a Cara: 0.5
 0, # 6. Recursos asignados a Cara: 0.6
 0, # 7. Recursos asignados a Cara: 0.7
 0, # 8. Recursos asignados a Cara: 0.8
 0, # 9. Recursos asignados a Cara: 0.9
 0, # 10. Recursos asignados a Cara: 1.0
-"Justifique brevemente.",
+"en 0.3 nos llevamos mas de lo que apostamos tanto si sale sello como si sale cara, si vamos un poco mas alto se empieza a ganar mas por cada cara pero en caso de salir sello solo recuperamos una parte, es menos estable",
 ]
 
 # %% [markdown]
@@ -348,8 +348,8 @@ respuestas[(1,11,"Diversificación")] = [
 # %%
 respuestas[(1,12,"Apuesta individual")] = [
 0, # 0. No
-0, # 1. Sí
-"Justifique brevemente.",
+1, # 1. Sí
+"dada la esperanza es probable que aumentemos el monto aunque sea de forma muy leve y en caso de haber perdidas tambien serian pocas",
 ]
 
 # %% [markdown]
@@ -366,8 +366,8 @@ respuestas[(1,12,"Apuesta individual")] = [
 respuestas[(1,13,"Fondo común")] = [
 0, # 0. Empeora
 0, # 1. Neutro
-0, # 1. Mejora
-"Justifique brevemente.",
+1, # 1. Mejora
+"mejora porque la esperanza es levemente superior a 1 por lo que al haber 100 casos se puee decir que el riesgo a tener perdidas disminuye notablemnte ya que el pozo de c/u tiende a aumentar",
 ]
 
 # %% [markdown]
@@ -383,9 +383,9 @@ respuestas[(1,13,"Fondo común")] = [
 # %%
 respuestas[(1,14,"Tragedia de los comunes")] = [
 0, # 0. Nos conviene aportar al fondo común
-0, # 1. Es indistinto
+1, # 1. Es indistinto
 0, # 1. Nos conviene dejar de aportar mientras seguimos recibiendo la cuota del fondo común
-"Justifique brevemente.",
+"lo unico que aumentaria seria el monto, no la cantidad de tiradas o el resultado de estas",
 ]
 
 
