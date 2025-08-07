@@ -52,10 +52,10 @@ respuestas[(1,0,"Moneda")] = [
 
 # %%
 respuestas[(1,1,"Cajas")] = [
-0.25, # 0. Caja 0
-0.25, # 1. Caja 1
-0.25, # 2. Caja 2
-0.25, # 3. Otro lugar
+0.33, # 0. Caja 0
+0.33, # 1. Caja 1
+0.33, # 2. Caja 2
+0, # 3. Otro lugar
 ""
 ]
 
